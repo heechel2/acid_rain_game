@@ -1,0 +1,12 @@
+cat
+banana
+english
+computer
+system
+file
+cook
+mouse
+energy
+data
+structure
+phone
