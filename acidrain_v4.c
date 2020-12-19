@@ -543,8 +543,9 @@ void startGame()
 			else
 			{
 				if (strcmp(quit, enterText) == 0) {
+					clear();
 					endwin();
-					exit(0);
+					exit(1);
 				}
 				enterText[enterHere++] = c;
 				move(17, 12);
