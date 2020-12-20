@@ -301,18 +301,19 @@ node*  makeNode()
 void findWord(char* str)
 {
 	node* temp = NULL;
+	node* delete;
 	temp = ptr;
 
 	while(temp)
 	{
 		if(!strcmp(temp->str, str))
-		{
-			score += strlen(str) * level;
-			strcpy(temp->str, "");
-			return;
-		}
-		else
-			temp = temp->link;
+			delete = temp;
+		temp = temp->link;
+	}
+	if(delete != NULL)
+	{
+		score += strlen(delete->str) * level;
+		strcpy(delete->str, "");
 	}
 }
 
